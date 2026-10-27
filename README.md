@@ -54,8 +54,10 @@ WebRTC의 실제 미디어 경로에는 서버 측 ICE/STUN/TURN 설정과 네�
 
 ## UE 5.3 SDK 호환성 방어
 
-한글 입력 수정본은 `YonghoKwon/PixelStreamingFrontendLib`의 `cf9173fee88be89646385f467f173046e25fde83` 커밋입니다.
-의존성은 이 커밋의 HTTPS 아카이브와 lockfile 무결성 값으로 고정해 SSH 키 없이 설치됩니다.
+한글 입력 수정본은 회사 내부 배포용 `@epicgames-ps/lib-pixelstreamingfrontend-ue5.3@1.0.10`입니다.
+빌드된 `.tgz`를 회사 Nexus에 등록하면 기존 회사 npm/Nexus 자동 설정으로 설치됩니다.
+저장소에서 레지스트리 주소·인증 설정을 바꾸지 않으며 GitHub 소스나 아카이브를 직접 받지 않습니다.
+Lockfile은 버전·무결성을 보존하고 레지스트리 URL은 고정하지 않습니다. 갱신 시 `npm run lock:portable`을 사용합니다.
 3D 입력칸을 클릭한 뒤 바로 입력하며, 별도 IME 포커스 버튼은 필요하지 않습니다.
 표준 조합 이벤트와 입력 교체 이벤트만 오는 환경을 모두 처리합니다.
 Windows 창 자동화 제약으로 실기 타이핑은 사용자 보조로 진행했고 React·기본 화면 모두 정상 입력을 확인했습니다.
