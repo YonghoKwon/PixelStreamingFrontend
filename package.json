@@ -1,0 +1,43 @@
+{
+  "name": "pixelstreamingfrontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YonghoKwon/PixelStreamingFrontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/YonghoKwon/PixelStreamingFrontend/issues"
+  },
+  "homepage": "https://github.com/YonghoKwon/PixelStreamingFrontend#readme",
+  "description": "Standalone React viewer for Unreal Engine 5.3 Pixel Streaming",
+  "dependencies": {
+    "@epicgames-ps/lib-pixelstreamingfrontend-ue5.3": "1.0.9",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "jsdom": "29.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
