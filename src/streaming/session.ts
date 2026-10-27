@@ -6,6 +6,8 @@ export class ViewerSession extends PixelStreaming {
 
   requestStreamerList() { this._webRtcController.webSocketController.requestStreamerList(); }
 
+  refreshLayout() { this._webRtcController.videoPlayer.resizePlayerStyle(); }
+
   selectTarget(streamerId: string) {
     if (!streamerId) return;
     const controller = this._webRtcController;
@@ -36,6 +38,7 @@ export function createSession(parent: HTMLElement, address: string, streamerId: 
     [Flags.HoveringMouseMode]: true,
     [Flags.MouseInput]: true,
     [Flags.KeyboardInput]: true,
+    [Flags.EnableIME]: true,
     [Flags.TouchInput]: true,
     [Flags.FakeMouseWithTouches]: true,
     [Flags.MatchViewportResolution]: false,

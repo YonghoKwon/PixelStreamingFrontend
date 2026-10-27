@@ -1,7 +1,7 @@
 # Pixel Streaming Frontend
 
 React + TypeScript + Vite로 만든 독립형 UE 5.3 Pixel Streaming 뷰어입니다.
-`@epicgames-ps/lib-pixelstreamingfrontend-ue5.3` **1.0.9**를 고정해 사용합니다.
+`@epicgames-ps/lib-pixelstreamingfrontend-ue5.3` 공식 1.0.9 기반 IME 포크를 고정해 사용합니다.
 화면과 자산은 이 저장소에서 빌드하며 Infrastructure/Frontend 또는 서버의 Public/player.js를 사용하지 않습니다.
 
 ## 실행
@@ -53,6 +53,12 @@ WebRTC의 실제 미디어 경로에는 서버 측 ICE/STUN/TURN 설정과 네�
 원격 화면 자체의 프레임 속도는 UE/GPU/인코더/네트워크 환경에 좌우됩니다.
 
 ## UE 5.3 SDK 호환성 방어
+
+한글 입력 수정본은 `YonghoKwon/PixelStreamingFrontendLib`의 `cf9173fee88be89646385f467f173046e25fde83` 커밋입니다.
+의존성은 이 커밋의 HTTPS 아카이브와 lockfile 무결성 값으로 고정해 SSH 키 없이 설치됩니다.
+3D 입력칸을 클릭한 뒤 바로 입력하며, 별도 IME 포커스 버튼은 필요하지 않습니다.
+표준 조합 이벤트와 입력 교체 이벤트만 오는 환경을 모두 처리합니다.
+Windows 창 자동화 제약으로 실기 타이핑은 사용자 보조로 진행했고 React·기본 화면 모두 정상 입력을 확인했습니다.
 
 이 저장소의 `src/streaming/GuardedConfig.ts`가 **SDK 인스턴스별로** 다음을 처리합니다.
 

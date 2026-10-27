@@ -22,7 +22,7 @@
   "homepage": "https://github.com/YonghoKwon/PixelStreamingFrontend#readme",
   "description": "Standalone React viewer for Unreal Engine 5.3 Pixel Streaming",
   "dependencies": {
-    "@epicgames-ps/lib-pixelstreamingfrontend-ue5.3": "1.0.9",
+    "@epicgames-ps/lib-pixelstreamingfrontend-ue5.3": "https://codeload.github.com/YonghoKwon/PixelStreamingFrontendLib/tar.gz/cf9173fee88be89646385f467f173046e25fde83",
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
