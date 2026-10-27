@@ -41,6 +41,11 @@ export default function App() {
   }, [log]);
   useEffect(() => () => stop(false), [stop]);
   useEffect(() => {
+    const observer = new ResizeObserver(() => current.current?.refreshLayout());
+    if (parent.current) observer.observe(parent.current);
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
     if (!expanded) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
